@@ -11,21 +11,8 @@ dnf upgrade -y 1>/etc/null
 # install
 echo 'install wget git vim nodejs python-pip ...'
 dnf install make cmake clang g++ -y 1>/etc/null
+dnf install tree util-linux-user net-tools -y 1>/etc/null
 dnf install wget git vim nodejs python-pip python-launcher -y 1>/etc/null
-dnf install tree -y 1>/etc/null
-
-# install chsh
-if ! command -v chsh &>/dev/null; then
-  echo 'install util-linux-user ...'
-  dnf install util-linux-user -y 1>/etc/null
-fi
-
-# install ifconfig
-
-if ! command -v ifconfig &>/dev/null; then
-  echo 'install net-tools ...'
-  dnf install net-tools -y 1>/etc/null
-fi
 
 # config git
 git config --global user.name "januwA"
