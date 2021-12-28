@@ -12,7 +12,7 @@ dnf upgrade -y 1>/etc/null
 echo 'install wget git vim nodejs python-pip ...'
 dnf install make cmake clang g++ -y 1>/etc/null
 dnf install tree util-linux-user net-tools -y 1>/etc/null
-dnf install wget git vim nodejs python-pip python-launcher -y 1>/etc/null
+dnf install wget git vim nodejs python-pip python3-devel python-launcher -y 1>/etc/null
 
 # config git
 git config --global user.name "januwA"
